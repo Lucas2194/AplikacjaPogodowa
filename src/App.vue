@@ -20,7 +20,7 @@ export default {
     async fetchWeatherData() {
       try {
         const apiKey = 'f061216668c5336449d17e06d1a06c8c'
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${apiKey}`)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${apiKey}&lang=pl`)
         const data = await response.json()
         this.weatherData = {
           description: data.weather[0].description,
